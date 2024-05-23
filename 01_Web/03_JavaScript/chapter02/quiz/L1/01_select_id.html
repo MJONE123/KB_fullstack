@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="header">Header</h1>
+    <script>
+        window.onload = function () {
+            let header = document.getElementById('header');
+
+            header.style.color = 'orange';
+            header.style.backgroundColor = 'red';
+            header.innerHTML = 'From JS'
+            
+            // const headerEl = document.getElementById('header');
+
+            // headerEl.style.color = 'orange';
+            // headerEl.style.backgroundColor = 'red';
+            // headerEl.innerHTML = 'From JS'
+        }
+    </script>
+</body>
+</html>

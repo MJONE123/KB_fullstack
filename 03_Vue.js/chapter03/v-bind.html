@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        <img :src="imgSrc" alt="손으로 그린 그림" />
+        <button v-on:click="changeImgSrc">이미지변경</button> 
+    </div>
+</body>
+<script>
+    const vueApp = Vue.createApp({
+        name: 'App',
+        data() {
+            return {
+                imgSrc: '이미지 주소',
+            };
+        },
+        methods: {
+            changeImgSrc() {
+                this.imgSrc = 
+                '변경할 이미지 주소'
+            },
+        },
+    }).mount("#app");
+</script>
+</html>

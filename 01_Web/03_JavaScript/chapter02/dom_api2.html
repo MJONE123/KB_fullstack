@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            background-color: skyblue;
+            width: 100px;
+            height: 100px;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .skyblue {
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box skyblue">BOX!!</div>
+    <script>
+        const boxEl = document.querySelector('.box');
+
+        boxEl.addEventListener('click', function (){
+            // boxEl.style.backgroundColor = '#c8c8c8';
+            if(boxEl.classList.contains('skyblue')) {
+                boxEl.classList.remove('skyblue');
+                boxEl.classList.add('red');
+            }
+            else {boxEl.classList.remove('red');
+            boxEl.classList.add('skyblue')
+            }
+        })
+    </script>
+</body>
+</html>
