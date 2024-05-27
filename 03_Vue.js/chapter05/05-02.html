@@ -11,6 +11,7 @@
         금액: <input type="text" v-model.number="amount" /> <br />
         <button @click="deposit">입금</button>
         <button @click="withdraw">인출</button> <br />
+        <h3>계좌 잔고: {{[balance]}}</h3>
         <h3>계좌 잔고: [{{balance}}]</h3>
     </div>
     <script>

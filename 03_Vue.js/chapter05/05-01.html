@@ -12,7 +12,7 @@
         <button v-on:click="balance += parseInt(amount)">입금</button>
         <button v-on:click="balance-= parseInt(amount)">인출</button>
         <br />
-        <h3>계좌 잔고: [{{balance}}]</h3>
+        <h3>계좌 잔고: {{balance}}</h3>
     </div>
     
     <script src="https://unpkg.com/vue"></script>
@@ -21,8 +21,8 @@
             name: "App",
             data() {
                 return {
-                amount: 0,
-                balance: 0,
+                    amount: 0,
+                    balance: 0,
                 };
             },
         }).mount("#app");

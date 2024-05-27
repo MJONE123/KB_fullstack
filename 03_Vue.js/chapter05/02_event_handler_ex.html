@@ -1,0 +1,45 @@
+<!-- 1. 위의 코드를 활용하여 페이지 생성 시 , 생성되는 랜덤 한 숫자(0~20)를 맞추는 프로그램을 완성하라
+     2. 확인 버튼을 누르면 text_input 입력 된 숫자 값과 랜덤 숫자를 비교해서 랜덤 숫자가 더 클 경우 up을, 작을 경구 Down을 출력함
+     3. 두 숫자가 같을 경우 '정답입니다'를 출력하는 Vue App을 완성하라 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>{{ msg }}</h1>
+        <input type="number" v-model="inputNum" />
+        <!-- 이것도 가능 -->
+        <!-- <input type="text" v-model.number="inputNum" /> -->
+        <button @click="checkGuess">확인</button>
+    </div>
+    
+    <script>
+        const vueApp = Vue.createApp({
+            name: 'App',
+            data() {
+                return {
+                    random: parseInt(Math.random() * 20),
+                    inputNum: 0,
+                    msg: '랜덤으로 생성 된 숫자를 맞춰보세요',
+                };
+            },
+            methods: {
+                checkGuess() {
+                    if (this.inputNum === this.random) {
+                        this.msg = '정답입니다!';
+                    } else if (this.inputNum < this.random) {
+                        this.msg = 'Up';
+                    } else {
+                        this.msg = 'Down';
+                    }
+                }
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>

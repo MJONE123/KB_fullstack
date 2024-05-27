@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id = "app" style="background-color: skyblue;">
+        <h1 style="background-color: orange;">count : {{count}}</h1>
+        <div style="background-color: #c8c8 " @click= "iDontWantToDiscount"></div>
+            <h1>안쪽</h1>
+        </div>
+        <button @click="discount">클릭!</button>
+    </div>
+    <h1>바깥쪽</h1>
+    <button @click= "discount">클릭!</button>
+
+</body>
+<script>
+    const vueApp = Vue.createApp({
+        name : "앱 이름",
+        data() {
+            return {
+               count:10, 
+            }
+        },
+        methods: {
+            discount() {
+                this.count--;
+            },
+            iDontWantToDiscount() {
+                this.count--;
+            }
+        },
+    }).mount("#app")
+</script>
+</html>
