@@ -1,10 +1,11 @@
 <script setup>
-import SendNameComponent from './components/SendNameComponent.vue';
+import ColorEmit from './components/ColorEmit.vue';
 </script>
 
 <template>
-  <div>
-    <h1> 너의 이름은 {{ name }}</h1>
+  <div :style="{backgroundColor: color}">
+    <h1>저의 색상을 정해주세요!!</h1>
+    <ColorEmit v-on:colorChange="ColorChangehandler" />
   </div>
 </template>
 
@@ -13,8 +14,14 @@ import SendNameComponent from './components/SendNameComponent.vue';
     name: 'App',
     data() {
       return{
-        name:'',
+        color: '',
       };
+    },
+    methods: {
+      ColorChangehandler(e) {
+       this.color = e.color;
+
+      }
     }
   }
 </script>
