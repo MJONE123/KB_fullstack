@@ -1,7 +1,7 @@
 <template>
     <div>
         <input type="text" v-model.trim="todo" />
-        <button @click="$emit('addTodo', {todo})">더해</button>
+        <button @click="$emit('addTodo', )">더해</button>
     </div>
 </template>
 
