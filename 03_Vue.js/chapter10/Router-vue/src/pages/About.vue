@@ -1,14 +1,17 @@
 <template>
-  <div class="card card -body">
-    <h2>About</h2>
-    <p>요청 경로 : {{ $route.fullPath }}</p>
+  <div>
+    <h1>라우터를 알려드리자면!</h1>
+    <img
+      src="https://imgnews.pstatic.net/image/076/2024/05/31/2024053101002184800307101_20240531134913438.jpg?type=w647"
+      alt=" 교통경찰관님"
+    />
   </div>
 </template>
+
 <script>
 export default {
-  name: "About",
-  created() {
-    console.log(this.$route);
-  },
+  name: "Home",
 };
 </script>
+
+<style scoped></style>
