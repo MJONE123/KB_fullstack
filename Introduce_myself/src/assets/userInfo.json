@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "김시완",
+    "age": 30,
+    "location": "양천구",
+    "position": "돈많고 일 안하는 백엔드",
+    "hobby": "코딩하기",
+    "saepo": "https://i.namu.wiki/i/nvDKu1Q0x-vBlAlicJ5jbzzn52kZ3FIFCUwx56WfK3UOGwSfU85bbwGvkvbG_nPONp2D1NKD9LF-GYV1Puzz-F0KV7hfUEkf7LtO1M6sU-V9MkKSW2w0muSAyG6F7MwDJ5XXt1hib-vGsPff3UEufA.webp",
+    "profileImage": "/siwan.png"
+  },
+  {
+    "id": 2,
+    "name": "김연지",
+    "age": 31,
+    "location": "관악구",
+    "position": "재택근무하는 백엔드",
+    "hobby": "뮤지컬 관람",
+    "saepo": "https://cdn.metavv.com/prod/uploads/10036598/images/165388499917034.jpg",
+    "profileImage": "/siwan.png"
+  },
+  {
+    "id": 3,
+    "name": "문준일",
+    "age": 30,
+    "location": "성동구",
+    "position": "적게 일하고 많이 버는 백엔드",
+    "hobby": "볼링, 넷플릭스 드라마 정주행",
+    "saepo": "https://cdn.metavv.com/prod/uploads/10036598/images/165388457668324.jpg",
+    "profileImage": "/joonil.png"
+  },
+  {
+    "id": 4,
+    "name": "임준수",
+    "age": 29,
+    "location": "영등포구",
+    "position": "야근 없는 풀스택 개발자",
+    "hobby": "공연 관람",
+    "saepo": "https://cdn.metavv.com/prod/uploads/10036598/images/165388954530479.jpg",
+    "profileImage": "/joonsu.png"
+  }
+]

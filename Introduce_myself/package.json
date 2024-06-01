@@ -1,5 +1,5 @@
 {
-  "name": "introduce-vue",
+  "name": "team-vue",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -9,7 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.4.21",
+    "bootstrap": "^5.3.3",
+    "vue": "^3.4.27",
     "vue-router": "^4.3.0"
   },
   "devDependencies": {
