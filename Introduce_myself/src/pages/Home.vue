@@ -22,7 +22,7 @@
 </template>
 
 <script setup>
-import userInfo from '@/assets/userInfo.json';
+import userInfo from "@/assets/userInfo.json";
 </script>
 
 <style scoped>
@@ -57,7 +57,8 @@ import userInfo from '@/assets/userInfo.json';
   align-items: center;
   justify-content: space-around;
   /* 그림자 */
-  box-shadow: 2px 2px 10px 0px rgba(44, 85, 124, 0.04), 2px 2px 30px 0px rgba(0, 0, 0, 0.16);
+  box-shadow: 2px 2px 10px 0px rgba(44, 85, 124, 0.04),
+    2px 2px 30px 0px rgba(0, 0, 0, 0.16);
   /* 폰트 색상 */
   color: black;
   /* 글자 밑줄 제거 */

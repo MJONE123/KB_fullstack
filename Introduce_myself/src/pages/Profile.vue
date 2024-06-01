@@ -28,9 +28,9 @@
 
 <script setup>
 // json 파일 import
-import oneUserInfo from '@/assets/userInfo.json';
+import oneUserInfo from "@/assets/userInfo.json";
 // 현재 주소 불러오기 위한 기능 import
-import { useRoute } from 'vue-router';
+import { useRoute } from "vue-router";
 
 // 현재 주소 불러오는 기능
 const currentRoute = useRoute();
@@ -73,7 +73,8 @@ const userInfo = oneUserInfo.filter((user) => {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  box-shadow: 2px 2px 10px 0px rgba(44, 85, 124, 0.04), 2px 2px 30px 0px rgba(0, 0, 0, 0.16);
+  box-shadow: 2px 2px 10px 0px rgba(44, 85, 124, 0.04),
+    2px 2px 30px 0px rgba(0, 0, 0, 0.16);
 }
 
 /* 프로필 이미지 프레임, Home과 동일합니다 */
