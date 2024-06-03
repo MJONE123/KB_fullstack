@@ -32,6 +32,13 @@
         * {
             /* user-select: none; */
         }
+        .home-container {
+            border: 1px solid #ccc;
+            position: absolute;
+            left: 100px;
+            right: 750px;
+            top: 700px;
+        }
         .video-container {
             width: 80%;
             max-width: 880px;
@@ -47,6 +54,19 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
         }
+
+        .pedro {
+            /* margin: 10px 200px 32px 200px; */
+            width: 100px;
+            height: 100px;
+            background-color: #c8c8;
+            border: 1px solid;
+            border-radius: 100%;
+            overflow: hidden;
+            display: flex;
+            object-position : center;
+            position:relative;
+        }
     </style>
 </head>
 
@@ -56,8 +76,14 @@
     <p>사각형 위로 마우스를 올려놔 보세요!!</p>
     <div class="video-container">
         <video controls="controls">
-            <source src="practive-vue/iPhone15.mp4" type="video/mp4">
+            <source src="C:/KB_fullstack/practice0601/practive-vue/iPhone15.mp4" type="video/mp4">
         </video>
     </div>
+    <div class="home-container">
+        <div class="pedro">
+        <img src="practive-vue/pedro.jpeg" alt="페드로라쿤" />
+        </div>
+    </div>
 </body>
+
 </html>
