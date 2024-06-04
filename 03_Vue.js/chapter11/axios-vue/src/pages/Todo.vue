@@ -75,7 +75,7 @@ async function addTodo() {
 
 async function deleteTodo(id) {
   try {
-    const deleteTodoRes = await axios.delete(`${BASEURL}${id}`);
+    const deleteTodoRes = await axios.delete(BASEURL + `/${id}`);
 
     if (deleteTodoRes.status !== 200) return alert("Todo 삭제 실패");
 
