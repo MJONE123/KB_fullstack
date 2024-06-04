@@ -14,3 +14,8 @@
 </template>
 
 <script setup></script>
+<style scoped>
+* {
+  user-select: none;
+}
+</style>

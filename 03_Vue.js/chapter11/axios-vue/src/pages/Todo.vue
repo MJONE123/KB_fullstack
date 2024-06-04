@@ -14,15 +14,21 @@
             :style="
               todoItem.done
                 ? { textDecoration: 'line-through' }
-                : { textDecoration: 'done' }
+                : { textDecoration: 'none' }
             "
             v-on:click="toggleTodo(todoItem.id)"
-            >{{ todoItem.todo }} {{ todoItem.done ? "(완료)" : "" }}</span
-          >
+            >{{ todoItem.todo }} {{ todoItem.done ? "(완료)" : "" }}
+          </span>
+          <!-- <수정모드> -->
+          <div v-if="todoItem.editing">
+            <input type="text" v-model.trim="todoEdit" />
+            <button @click.stop="confirmEditTodo(todoItem.id)">확인</button>
+            <button v-on:click.stop="cancelEditTodo(todoItem.id)">취소</button>
+          </div>
           &nbsp;
           <!-- v-if="!todoItem.editing" -->
-          <span>
-            <button>수정</button>
+          <span v-if="!todoItem.editing">
+            <button @click.stop="editTodo(todoItem.id)">수정</button>
             /
             <button @click.stop="deleteTodo(todoItem.id)">삭제</button>
           </span>
@@ -41,6 +47,7 @@ const states = reactive({
 });
 
 const todo = ref("");
+const todoEdit = ref("");
 // api는 로컬호스트:3000이다. 위에서 선언함
 const BASEURL = "api/todos/";
 
@@ -90,6 +97,7 @@ async function deleteTodo(id) {
 async function toggleTodo(id) {
   try {
     const targetTodo = states.todoList.find((todo) => todo.id === id);
+    //수정할 때 살려하 할 것은 ...targetTodo 해버린다!!!!!매우중요@@@@@@@@@@@@
     const payload = { ...targetTodo, done: !targetTodo.done };
 
     const toggleTodoRes = await axios.put(BASEURL + `/${id}`, payload);
@@ -103,5 +111,41 @@ async function toggleTodo(id) {
   }
 }
 
+function editTodo(id) {
+  const targetTodo = states.todoList.find((todo) => todo.id === id);
+  targetTodo.editing = true;
+}
+
+function cancelEditTodo(id) {
+  const targetTodo = states.todoList.find((todo) => todo.id === id);
+  targetTodo.editing = false;
+}
+// 확인은 서버에 전송을 해야 하니 async를 해야한다.
+async function confirmEditTodo(id) {
+  // 비동기처리할거니 무지성으로 trycatch
+  if (todoEdit.value === "") return alert("수정 내용을 입력하세요!");
+  try {
+    const targetTodo = states.todoList.find((todo) => todo.id === id);
+    // editing: false 입력해야 수정한 뒤에 창이 사라짐
+    const payload = { ...targetTodo, todo: todoEdit.value, editing: false };
+
+    const editTodoRes = await axios.put(BASEURL + `/${id}`, payload);
+
+    if (editTodoRes.status !== 200) return alert("Todo 수정 실패");
+
+    todoEdit.value = "";
+    fetchTodoList();
+  } catch (e) {
+    alert("수정 작업 중 ERR 발생");
+    console.log(e);
+  }
+}
+
 fetchTodoList();
 </script>
+
+<style scoped>
+* {
+  user-select: none;
+}
+</style>

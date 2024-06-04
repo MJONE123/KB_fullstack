@@ -3,7 +3,8 @@
     {
       "id": "1",
       "todo": "뉴진스 보기",
-      "done": false
+      "done": false,
+      "editing": false
     },
     {
       "id": "2",
