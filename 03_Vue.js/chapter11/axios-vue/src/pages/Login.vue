@@ -27,7 +27,7 @@ const userPassword = ref("");
 async function login() {
   try {
     // Json-server 에서 사용자 목록을 받아오는 주소 값
-    const url = "http://localhost:3000/Users";
+    const url = "http://localhost:3000/users";
     // axios 의 get method 를 활용하여 사용자 목록을 요청하고 해당 결과를 받는 코드
     // 비동기 통신이므로 await 사용 필수!!
     const loginRes = await axios.get(url);
