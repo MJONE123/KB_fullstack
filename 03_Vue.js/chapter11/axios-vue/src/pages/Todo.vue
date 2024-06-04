@@ -13,9 +13,10 @@
           <span
             :style="
               todoItem.done
-                ? { textDecoration: 'line_thruogh' }
+                ? { textDecoration: 'line-through' }
                 : { textDecoration: 'done' }
             "
+            v-on:click="toggleTodo(todoItem.id)"
             >{{ todoItem.todo }} {{ todoItem.done ? "(완료)" : "" }}</span
           >
           &nbsp;
@@ -82,6 +83,22 @@ async function deleteTodo(id) {
     fetchTodoList();
   } catch (e) {
     alert("Todolist 삭제 작업 중... ERR 발생");
+    console.log(e);
+  }
+}
+
+async function toggleTodo(id) {
+  try {
+    const targetTodo = states.todoList.find((todo) => todo.id === id);
+    const payload = { ...targetTodo, done: !targetTodo.done };
+
+    const toggleTodoRes = await axios.put(BASEURL + `/${id}`, payload);
+
+    if (toggleTodoRes.status !== 200) return alert("Todo toggle 실패");
+
+    fetchTodoList();
+  } catch (e) {
+    alert("Todolist 토글 작업 중 ERR 발생");
     console.log(e);
   }
 }
