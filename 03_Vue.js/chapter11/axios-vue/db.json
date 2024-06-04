@@ -3,25 +3,21 @@
     {
       "id": "1",
       "todo": "뉴진스 보기",
-      "desc": "언젠간 보고 만다🐱‍🏍",
       "done": false
     },
     {
       "id": "2",
       "todo": "에스파 보기",
-      "desc": "언젠간 보고 만다🤦‍♂️",
       "done": false
     },
     {
-      "id": "02b7",
-      "todo": "들어가니>>",
-      "desc": "들어갔니?",
+      "id": "3",
+      "todo": "todolist 만들기",
       "done": false
     },
     {
       "id": "8dba",
       "todo": "post 해보자",
-      "desc": "post 해보ㄹ래?",
       "done": false
     }
   ],
@@ -31,8 +27,8 @@
       "password": "1111"
     },
     {
-        "id":"answnsdlf",
-        "password" : "answnsdlf"
+      "id": "answnsdlf",
+      "password": "answnsdlf"
     }
   ]
 }
