@@ -25,6 +25,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
+    position: relative;
 }
 
 .nav-logo {
@@ -43,6 +44,24 @@ body {
 .nav-links a {
     color: #fff;
     text-decoration: none;
+}
+
+/* 햄버거 버튼 스타일 */
+.nav-toggle {
+    display: none; /* 기본적으로 햄버거 버튼은 보이지 않음 */
+    flex-direction: column;
+    cursor: pointer;
+    /* 수정된 햄버거 버튼 위치 */
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.nav-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
 }
 
 /* 헤더 스타일 */
@@ -93,17 +112,27 @@ body {
 /* 모바일 디바이스 대응을 위한 미디어 쿼리 */
 @media (max-width: 600px) {
     .navbar {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row; /* 네비게이션 바를 가로로 유지 */
+        justify-content: space-between;
+    }
+
+    .nav-toggle {
+        display: flex; /* 화면이 좁아질 때 햄버거 버튼 보이게 설정 */
     }
 
     .nav-links {
         flex-direction: column;
         width: 100%;
+        display: none; /* 기본적으로 네비게이션 링크 숨김 */
+        position: absolute;
+        top: 3.5rem; /* 햄버거 버튼 아래에 네비게이션 링크 표시 */
+        left: 0;
+        background-color: #333;
     }
 
     .nav-links li {
         margin: 0.5rem 0;
+        text-align: center;
     }
 
     .header h1 {

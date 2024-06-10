@@ -9,12 +9,18 @@
 <body>
     <nav class="navbar">
         <div class="nav-logo">Logo</div>
-        <ul class="nav-links">
+        <ul class="nav-links" id="navLinks">
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
+        <!-- 햄버거 버튼 위치 수정 -->
+        <div class="nav-toggle" id="navToggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
     </nav>
 
     <header class="header">
@@ -36,5 +42,17 @@
     <footer class="footer">
         <p>&copy; 2024 Your Company. All rights reserved.</p>
     </footer>
+
+    <!-- JavaScript for hamburger menu -->
+    <script>
+        document.getElementById('navToggle').addEventListener('click', function() {
+            var navLinks = document.getElementById('navLinks');
+            if (navLinks.style.display === 'flex') {
+                navLinks.style.display = 'none';
+            } else {
+                navLinks.style.display = 'flex';
+            }
+        });
+    </script>
 </body>
 </html>
