@@ -32,6 +32,12 @@ body {
     font-size: 1.5rem;
 }
 
+/* 이미지 크기 조절을 위한 스타일 */
+.nav-logo img {
+    height: 50px; /* 헤더 크기에 맞추어 이미지 높이 조정 */
+    width: auto; /* 비율 유지 */
+}
+
 .nav-links {
     list-style: none;
     display: flex;
