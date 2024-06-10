@@ -51,7 +51,6 @@ body {
     display: none; /* 기본적으로 햄버거 버튼은 보이지 않음 */
     flex-direction: column;
     cursor: pointer;
-    /* 수정된 햄버거 버튼 위치 */
     position: absolute;
     top: 1rem;
     right: 1rem;
@@ -99,6 +98,38 @@ body {
 .section p {
     font-size: 1rem;
     color: #333;
+}
+
+/* 폼 컨테이너 스타일 */
+.form-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.form-container input,
+.form-container select,
+.form-container button {
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+/* 가계부 테이블 스타일 */
+.ledger-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.ledger-table th,
+.ledger-table td {
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+.ledger-table th {
+    background-color: #f4f4f4;
 }
 
 /* 푸터 스타일 */

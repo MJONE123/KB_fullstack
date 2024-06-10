@@ -15,7 +15,6 @@
             <li><a href="#">Services</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
-        <!-- 햄버거 버튼 위치 수정 -->
         <div class="nav-toggle" id="navToggle">
             <div class="bar"></div>
             <div class="bar"></div>
@@ -30,12 +29,29 @@
 
     <main class="main-content">
         <section class="section">
-            <h2>Section 1</h2>
-            <p>This is some content for section 1.</p>
-        </section>
-        <section class="section">
-            <h2>Section 2</h2>
-            <p>This is some content for section 2.</p>
+            <h2>가계부</h2>
+            <div class="form-container">
+                <input type="text" id="description" placeholder="설명">
+                <input type="number" id="amount" placeholder="금액">
+                <select id="type">
+                    <option value="income">수입</option>
+                    <option value="expense">지출</option>
+                </select>
+                <button onclick="addTransaction()">추가</button>
+            </div>
+            <table class="ledger-table">
+                <thead>
+                    <tr>
+                        <th>설명</th>
+                        <th>금액</th>
+                        <th>유형</th>
+                        <th>날짜</th>
+                    </tr>
+                </thead>
+                <tbody id="ledgerBody">
+                    <!-- 트랜잭션이 여기에 추가됩니다. -->
+                </tbody>
+            </table>
         </section>
     </main>
 
@@ -43,7 +59,7 @@
         <p>&copy; 2024 Your Company. All rights reserved.</p>
     </footer>
 
-    <!-- JavaScript for hamburger menu -->
+    <!-- JavaScript for hamburger menu and transaction functionality -->
     <script>
         document.getElementById('navToggle').addEventListener('click', function() {
             var navLinks = document.getElementById('navLinks');
@@ -53,6 +69,33 @@
                 navLinks.style.display = 'flex';
             }
         });
+
+        function addTransaction() {
+            var description = document.getElementById('description').value;
+            var amount = document.getElementById('amount').value;
+            var type = document.getElementById('type').value;
+            var date = new Date().toLocaleDateString();
+
+            if (description === "" || amount === "") {
+                alert("설명과 금액을 입력해주세요.");
+                return;
+            }
+
+            var table = document.getElementById('ledgerBody');
+            var row = table.insertRow();
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            var cell3 = row.insertCell(2);
+            var cell4 = row.insertCell(3);
+
+            cell1.textContent = description;
+            cell2.textContent = amount;
+            cell3.textContent = type === "income" ? "수입" : "지출";
+            cell4.textContent = date;
+
+            document.getElementById('description').value = "";
+            document.getElementById('amount').value = "";
+        }
     </script>
 </body>
 </html>
