@@ -169,6 +169,7 @@ body {
     border: 1px solid #888;
     width: 80%;
     max-width: 500px;
+    position: relative;
 }
 
 .close {
@@ -205,6 +206,12 @@ body {
 
 #calendar th {
     background-color: #f4f4f4;
+}
+
+/* 선택된 날짜 스타일 */
+.selected {
+    background-color: #007bff;
+    color: white;
 }
 
 /* 모바일 디바이스 대응을 위한 미디어 쿼리 */

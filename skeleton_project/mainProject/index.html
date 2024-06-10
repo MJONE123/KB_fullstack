@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>반응형 웹페이지</title>
+    <title>텅텅가계부</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,10 +12,10 @@
             <img src="../logo1.jpg" alt="Logo">
         </div>
         <ul class="nav-links" id="navLinks">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#">준일</a></li>
+            <li><a href="#">예지</a></li>
+            <li><a href="#">승아</a></li>
+            <li><a href="#">민준</a></li>
         </ul>
         <div class="nav-toggle" id="navToggle">
             <div class="bar"></div>
@@ -25,8 +25,8 @@
     </nav>
 
     <header class="header">
-        <h1>Welcome to Our Website</h1>
-        <p>Your description here</p>
+        <h1>텅텅가계부</h1>
+        <p>02:49분이네 지금 자면 몇시간 잘 수 있나</p>
     </header>
 
     <main class="main-content">
@@ -59,7 +59,7 @@
     </main>
 
     <footer class="footer">
-        <p>&copy; 2024 Your Company. All rights reserved.</p>
+        <p>&copy; 2024 텅텅가계부. All rights reserved.</p>
     </footer>
 
     <!-- 달력 모달 -->
@@ -67,6 +67,7 @@
         <div class="modal-content">
             <span class="close" onclick="closeCalendar()">&times;</span>
             <div id="calendar"></div>
+            <button onclick="confirmDate()">확인</button>
         </div>
     </div>
 
@@ -93,8 +94,17 @@
         }
 
         // 날짜 선택
-        function selectDate(date) {
+        function selectDate(date, element) {
             selectedDate = date;
+            var cells = document.querySelectorAll('#calendar td');
+            cells.forEach(function(cell) {
+                cell.classList.remove('selected');
+            });
+            element.classList.add('selected');
+        }
+
+        // 선택한 날짜 확인
+        function confirmDate() {
             closeCalendar();
         }
 
@@ -155,7 +165,7 @@
                 dateRow.appendChild(emptyCell);
             }
 
-            for (var date =  1; date <= lastDate; date++) {
+            for (var date = 1; date <= lastDate; date++) {
                 if (dateRow.children.length === 7) {
                     table.appendChild(dateRow);
                     dateRow = document.createElement('tr');
@@ -163,7 +173,7 @@
                 var dateCell = document.createElement('td');
                 dateCell.textContent = date;
                 dateCell.addEventListener('click', function() {
-                    selectDate(new Date(year, month, this.textContent).toLocaleDateString());
+                    selectDate(new Date(year, month, this.textContent).toLocaleDateString(), this);
                 });
                 dateRow.appendChild(dateCell);
             }
