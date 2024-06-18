@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="pinia-test-app">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/03_Vue.js/chapter13/pinia-test-app.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

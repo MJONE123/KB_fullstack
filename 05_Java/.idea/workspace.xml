@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="74da28b4-1657-45bb-be61-e5823c995722" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/../03_Vue.js/chapter07/todolist-app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03_Vue.js/chapter07/todolist-app/.vscode/extensions.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03_Vue.js/chapter07/todolist-app/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03_Vue.js/chapter07/todolist-app/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03_Vue.js/chapter07/todolist-app/jsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03_Vue.js/chapter07/todolist-app/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03_Vue.js/chapter07/todolist-app/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03_Vue.js/chapter07/todolist-app/src/App.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03_Vue.js/chapter07/todolist-app/src/assets/base.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03_Vue.js/chapter07/todolist-app/src/assets/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03_Vue.js/chapter07/todolist-app/src/assets/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03_Vue.js/chapter07/todolist-app/src/components/HelloWorld.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03_Vue.js/chapter07/todolist-app/src/components/TheWelcome.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03_Vue.js/chapter07/todolist-app/src/components/WelcomeItem.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03_Vue.js/chapter07/todolist-app/src/components/icons/IconCommunity.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03_Vue.js/chapter07/todolist-app/src/components/icons/IconDocumentation.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03_Vue.js/chapter07/todolist-app/src/components/icons/IconEcosystem.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03_Vue.js/chapter07/todolist-app/src/components/icons/IconSupport.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03_Vue.js/chapter07/todolist-app/src/components/icons/IconTooling.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03_Vue.js/chapter07/todolist-app/src/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03_Vue.js/chapter07/todolist-app/vite.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03_Vue.js/chapter07/vue-project/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../03_Vue.js/chapter07/vue-project/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03_Vue.js/chapter07/vue-test/src/App-component_ex.vue" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2i1uCgGIvEwXqiC1S08SO9vYwFi" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/KB_fullstack/05_Java",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17890.1" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17890.1" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="디폴트 작업">
+      <changelist id="74da28b4-1657-45bb-be61-e5823c995722" name="변경" comment="" />
+      <created>1718670278706</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1718670278706</updated>
+      <workItem from="1718670279772" duration="98000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
