@@ -12,7 +12,7 @@ public class AnimalMain2 {
     private static void soundAnimal(Animal animal) {
         animal.sound();
     }
-}
 
+}
 
 
