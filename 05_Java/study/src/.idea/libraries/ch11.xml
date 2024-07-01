@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="ch11">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/quiz/src/ch11.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
