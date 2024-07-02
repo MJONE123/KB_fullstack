@@ -5,7 +5,7 @@ public class Car {
     private int oilAmount;
     private Engine engine;
 
-    public Car(String model, int oilAmount, Engine engine) {
+    public Car(String model, int oilAmount) {
         this.model = model;
         this.oilAmount = oilAmount;
         this.engine = new Engine(this);
@@ -24,3 +24,4 @@ public class Car {
         System.out.println(model + "의 주행을 시작합니다!");
     }
 }
+
