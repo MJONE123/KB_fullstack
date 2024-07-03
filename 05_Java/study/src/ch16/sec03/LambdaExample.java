@@ -12,7 +12,7 @@ public class LambdaExample {
             System.out.println(job);
         });
 
-        person.action2(word -> {
+        person.action2(content -> {
 
                 }
                 );
