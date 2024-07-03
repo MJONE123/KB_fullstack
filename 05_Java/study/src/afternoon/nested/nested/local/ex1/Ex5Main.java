@@ -33,5 +33,21 @@ public class Ex5Main {
                 System.out.println("주사위를 두 번 굴린 값의 합은 : " + sum);
             }
         });
+
+        complicatedProgram(new Dice() {
+            @Override
+            public void run() {
+                System.out.println("***오늘은 행운의 날입니다. 행복하세요!");
+            }
+        });
+
+        complicatedProgram(new Dice() {
+            @Override
+            public void run() {
+                int rand3 = new Random().nextInt(99) + 1;
+                System.out.println("***오늘의 행운의 번호는" + rand3 + "입니다");
+            }
+        });
+
     }
 }
