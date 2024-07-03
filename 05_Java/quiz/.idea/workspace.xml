@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="023561ab-23b7-4115-9ebb-b4188573461a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../study/src/ch06/sec06/exam01/Car.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study/src/ch06/sec07/exam01/Car.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study/src/ch06/sec07/exam01/CarExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study/src/ch06/sec07/exam02/Korean.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study/src/ch06/sec07/exam02/KoreanExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study/src/ch06/sec07/exam03/Korean.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study/src/ch06/sec07/exam03/KoreanExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study/src/ch06/sec07/exam04/Car.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study/src/ch06/sec07/exam04/CarExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study/src/ch06/sec07/exam05/Car.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study/src/ch06/sec07/exam05/CarExample.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "MJONE123"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/MJONE123/KB_fullstack.git",
+    "accountId": "196612a0-9e18-4313-8baa-b2247e733275"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="2iPKnEij5i3omZeihxZLqQOsxqg" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ExceptionHandlingExample.executor": "Run",
+    "Application.ExceptionHandlingExample1.executor": "Run",
+    "Application.TryWithResourceExample.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/KB_fullstack/05_Java/study/src/quiz",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ch11.sec03.exam03" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.TryWithResourceExample">
+    <configuration name="ExceptionHandlingExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ch11.sec03.exam01.ExceptionHandlingExample" />
+      <module name="quiz" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ch11.sec03.exam01.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExceptionHandlingExample1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ch11.sec02.exam01.ExceptionHandlingExample1" />
+      <module name="quiz" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ch11.sec02.exam01.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TryWithResourceExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ch11.sec04.TryWithResourceExample" />
+      <module name="quiz" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ch11.sec04.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.TryWithResourceExample" />
+        <item itemvalue="Application.ExceptionHandlingExample1" />
+        <item itemvalue="Application.ExceptionHandlingExample" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17890.1" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17890.1" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="023561ab-23b7-4115-9ebb-b4188573461a" name="Changes" comment="" />
+      <created>1719386936243</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1719386936243</updated>
+      <workItem from="1719386937351" duration="2490000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
