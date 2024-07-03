@@ -5,20 +5,21 @@ public class LambdaExample {
         // x + y 계산
         action((x, y) -> {
             int result = x + y;
-            System.out.println("result: " + result);
-
+            System.out.println("result = " + result);
         });
-        //x - y 계산
+
+        // x – y 계산
         action((x, y) -> {
             int result = x - y;
-            System.out.println("result: " + result);
+            System.out.println("result = " + result);
         });
     }
 
-    public static void action(Calculable calculable){
+    public static void action(Calculable calculable) {
         //데이터
         int x = 10;
         int y = 4;
-
+        //데이터 처리
+        calculable.calculate(x, y);
     }
 }
