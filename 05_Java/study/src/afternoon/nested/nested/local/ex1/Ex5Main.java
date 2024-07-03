@@ -2,7 +2,7 @@ package afternoon.nested.nested.local.ex1;
 
 import java.util.*;
 
-public class Ex3Main {
+public class Ex5Main {
     public static void complicatedProgram(Dice dice) {
         System.out.println("복잡한 과정 시작");
         System.out.println("복잡한 과정 종료 후, 원하는 기능 실행");
@@ -16,15 +16,15 @@ public class Ex3Main {
     }
 
     public static void main(String[] args) {
-        class DiceOnce implements Dice {
+        complicatedProgram(new Dice() {
             @Override
             public void run() {
                 int rand = new Random().nextInt(6) + 1;
                 System.out.println("주사위의 값은 : " + rand);
             }
-        }
+        });
 
-        class DiceSum implements Dice {
+        complicatedProgram(new Dice() {
             @Override
             public void run() {
                 int rand1 = new Random().nextInt(6) + 1;
@@ -32,9 +32,6 @@ public class Ex3Main {
                 int sum = rand1 + rand2;
                 System.out.println("주사위를 두 번 굴린 값의 합은 : " + sum);
             }
-        }
-
-        complicatedProgram(new DiceOnce());
-        complicatedProgram(new DiceSum());
+        });
     }
 }
