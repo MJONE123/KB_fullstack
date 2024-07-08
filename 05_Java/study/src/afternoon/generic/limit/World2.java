@@ -11,3 +11,4 @@ public class World2 {
         System.out.println(LongWorld.getNumber());
     }
 }
+
