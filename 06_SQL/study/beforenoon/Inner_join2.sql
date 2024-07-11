@@ -98,3 +98,17 @@ join products as p
 on p.product_id = od.product_id
 join categories as cat
 on cat.category_id = p.category_id;
+
+
+use mydb2;
+select * from products as p
+join orders_details as od
+on p.product_id = od.product_id;
+
+-- 물품이 몇개 팔렷나
+select p.product_name, sum(od.quantity) as 총판매수
+from  products p
+join orders_details od
+on p.product_id = od.product_id
+group by p.product_id
+order by 총판매수 desc;
