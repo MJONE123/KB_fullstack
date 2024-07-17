@@ -1,4 +1,4 @@
-package org.scoula.jdbc_ex.common;
+package org.example.user;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

@@ -1,19 +1,30 @@
-# use jdbc_ex
-# ;
-# CREATE TABLE USERS (
-#                        ID VARCHAR(12) NOT NULL PRIMARY KEY,
-#                        PASSWORD VARCHAR(12) NOT NULL,
-#                        NAME VARCHAR(30) NOT NULL,
-#                        ROLE VARCHAR(6) NOT NULL
-# );
-# INSERT INTO USERS(ID, PASSWORD, NAME, ROLE)
-# VALUES('guest', 'guest123', '방문자', 'USER');
-# INSERT INTO USERS(ID, PASSWORD, NAME, ROLE)
-# VALUES('admin', 'admin123', '관리자', 'ADMIN');
-# INSERT INTO USERS(ID, PASSWORD, NAME, ROLE)
-# VALUES('member', 'member123', '일반회원', 'USER');
+use jdbc_ex;
 
+CREATE TABLE user_table
+(
+    id          INT AUTO_INCREMENT PRIMARY KEY,
+    userid      VARCHAR(50)  NOT NULL UNIQUE,
+    name        VARCHAR(100) NOT NULL,
+    password    VARCHAR(255) NOT NULL,
+    age         INT          NOT NULL,
+    membership  BOOLEAN      NOT NULL DEFAULT 0,
+    signup_date TIMESTAMP             DEFAULT CURRENT_TIMESTAMP
+);
 
-SELECT * FROM USERS;
+INSERT INTO user_table (userid, name, password, age, membership)
+VALUES ('xenosign', '이효석', '1234', 40, 1);
 
+INSERT INTO user_table (userid, name, password, age, membership)
+VALUES ('kimsiwan', '김시완', '1234', 30, 1);
 
+INSERT INTO user_table (userid, name, password, age, membership)
+VALUES ('imsiwan', '임시완', '1234', 38, 0);
+
+INSERT INTO user_table (userid, name, password, age, membership)
+VALUES ('pororo', '뽀로로', '1234', 10, 0);
+
+INSERT INTO user_table (userid, name, password, age, membership)
+VALUES ('luppy', '김루피', '1234', 9, 1);
+
+SELECT *
+FROM user_table;

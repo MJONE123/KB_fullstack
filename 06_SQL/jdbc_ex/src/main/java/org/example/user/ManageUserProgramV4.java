@@ -2,41 +2,51 @@ package org.example.user;
 
 import java.util.Scanner;
 
-public class ManageUserProgramV3 {
+public class ManageUserProgramV4 {
     public static void main(String[] args) {
+        ManageUser manageUser = new ManageUser();
         Scanner scanner = new Scanner(System.in);
 
-        // 회원 정보를 입력 받기
-        System.out.print("추가할 회원의 ID: ");
-        String newId = scanner.nextLine();
-        System.out.print("이름: ");
-        String name = scanner.nextLine();
-        System.out.print("비밀번호: ");
-        String newPassword = scanner.nextLine();
-        System.out.print("나이: ");
-        int age = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
-        System.out.print("멤버쉽 여부 (true/false): ");
-        boolean membership = scanner.nextBoolean();
-        scanner.nextLine(); // Consume newline
+        while (true) {
+            System.out.println("====== 회원 관리 프로그램 ======");
+            System.out.println("1. 회원 목록 조회");
+            System.out.println("2. 회원 추가");
+            System.out.println("3. 회원 삭제");
+            System.out.println("4. 특정 이름을 가지는 회원 조회");
+            System.out.print("원하는 작업 번호를 입력하세요: ");
 
-        // 이전 코드 내용
+            int choice = scanner.nextInt();
+            scanner.nextLine();
 
-        // 입력 받은 정보로 새로운 회원 객체 생성
-        User newUser = new User(0, newId, name, newPassword, age, membership, null);
+            if (choice == 1) {
+                manageUser.getAllUsers();
+            } else if (choice == 2) {
+                System.out.print("추가할 회원의 ID: ");
+                String newId = scanner.nextLine();
+                System.out.print("이름: ");
+                String name = scanner.nextLine();
+                System.out.print("비밀번호: ");
+                String newPassword = scanner.nextLine();
+                System.out.print("나이: ");
+                int age = scanner.nextInt();
+                scanner.nextLine(); // Consume newline
+                System.out.print("멤버쉽 여부 (true/false): ");
+                boolean membership = scanner.nextBoolean();
+                scanner.nextLine(); // Consume newline
 
-        // DB 통신을 전담하는 인스턴스의 메서드를 사용하여 OOP 적 구현
-        ManageUser manageUser = new ManageUser();
-        // 생성한 회원 객체를 전달
-        manageUser.addUser(newUser);
-
-
-        // 삭제할 회원의 id 입력 받기
-        System.out.print("삭제할 회원의 ID: ");
-        int deleteId = scanner.nextInt();
-
-        // 기능을 구현한 deleteUserById 를 사용하여 회원 삭제 진행
-        manageUser.deleteUserById(deleteId);
-
+                User newUser = new User(0, newId, name, newPassword, age, membership, null);
+                manageUser.addUser(newUser);
+            } else if (choice == 3) {
+                System.out.print("삭제할 회원의 ID: ");
+                int deleteId = scanner.nextInt();
+                manageUser.deleteUserById(deleteId);
+            } else if (choice == 4) {
+                System.out.print("검색할 이름의 일부를 입력하세요 : ");
+                String namePart = scanner.nextLine();
+                manageUser.searchUsersByName(namePart);
+            } else {
+                System.out.println("잘못된 선택입니다. 다시 시도하십시오.");
+            }
+        }
     }
 }
