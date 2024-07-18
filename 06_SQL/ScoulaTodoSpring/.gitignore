@@ -15,7 +15,7 @@ build/
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
-
+travel/
 
 ### Eclipse ###
 .apt_generated
@@ -41,5 +41,3 @@ bin/
 
 ### Mac OS ###
 .DS_Store
-
-*.hprof
