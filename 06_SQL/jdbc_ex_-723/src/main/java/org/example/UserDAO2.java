@@ -193,7 +193,23 @@ public class UserDAO2 {
             System.out.println("3. SQL문 생성 OK");
 
             //4. SQL 문 전송
-            
+            ResultSet rs = stmt.executeQuery(sql);
+            //결과 데이터를 전부 순회하는 while문
+            while (rs.next()) {
+                int userid = rs.getInt("id");
+                String email = rs.getString("email");
+                String userpassword = rs.getString("password");
+                String name = rs.getString("name");
+
+                System.out.printf("ID: %d, Email:%s, Password: %s, Name: %s%n", userid, email, userpassword, name);
+            }
+
+            //5. 자원 해제
+            rs.close();
+            stmt.close();
+            conn.close();
+        }catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
