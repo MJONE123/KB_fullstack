@@ -46,52 +46,7 @@ public class UserDAO2 {
     }
 
     public List<UserVo1> getAllUsers() {
-        List<UserVo1> userList = new ArrayList<>();
 
-        try {
-            // 1.첫번째로 Driver 커넥터 설정
-            String driver = "com.mysql.cj.jdbc.Driver";
-            Class.forName(driver);
-            System.out.println("1. 드라이버 설정 OK");
-
-            //2.두번째로 DB 연결
-            String url = "jdbc:mysql://localhost:3306/user_ex";
-            String id = "root";
-            String password = "1234";
-            //접속과정
-            Connection conn = DriverManager.getConnection(url, id, password);
-            System.out.println("2. DB 연결 OK");
-
-            //3. 세번째 SQL 문 생성
-            String sql = "SELECT id, email, password FROM users";
-            Statement stmt = conn.createStatement();
-            System.out.println("3.sql문 생성 ok");
-
-            //4. SQL 문 전송
-            ResultSet rs = stmt.executeQuery(sql);
-
-            //결과 데이터를 전부 순회하는 while 문
-            while (rs.next()) {
-                int userid = rs.getInt("id");
-                String email = rs.getString("email");
-                String userpassword = rs.getString("password");
-
-                UserVo1 user = new UserVo1(userid, email, userpassword);
-                userList.add(user);
-
-                //5. 자원 해제
-                rs.close();
-                stmt.close();
-                conn.close();
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        //6. 결과 리턴
-        //데이터가 전부 추가된 리스트를 리턴
-        // 통신이 잘못되면 try catch 구문이 정상적으로 실행이 안되므로 빈 리스트가 리턴
-
-        return userList;
     }
 
     public void updateUser(int userid, String newEmail, String newPassword) {

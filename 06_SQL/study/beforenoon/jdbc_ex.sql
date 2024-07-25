@@ -5,4 +5,4 @@ grant all privileges on jdbc_ex.* to 'jdbc_ex'@'%';
 flush privileges;
 
 
-drop database jdbs_ex;
+drop database jdbs_ex;user_info

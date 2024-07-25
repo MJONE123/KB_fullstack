@@ -5,6 +5,7 @@ select * from country;
 select * from countrylanguage;
 
 #crud
+    SELECT  * FROM city;
 
 #create
 insert into `city` (name, countrycode, district, population)
@@ -68,3 +69,4 @@ select * from city
 select * from city;
 select * from country;
 select * from countrylanguage;
+
