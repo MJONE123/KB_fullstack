@@ -12,7 +12,7 @@
 </head>
 <body>
 <%@ include file="header.jsp"%>
-    <h1>로그인 성공~! <%= request.getAttribute("username")%></h1>
+    <h1>request 대신 session 으로 로그인 성공~! <%= session.getAttribute("userid")%></h1>
 
     <h2>하위${username}</h2>
 </body>

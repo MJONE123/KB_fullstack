@@ -11,8 +11,9 @@
     <title>Title</title>
 </head>
 <body>
-    <%@ include file= "../header.jsp" %>
+    <%@ include file= "header.jsp" %>
     <h1>로그인이 필요한 서비스입니다</h1>
+<a href="login"><button type="button">로그인 페이지로</button></a>
 
 </body>
 </html>
