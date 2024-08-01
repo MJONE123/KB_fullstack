@@ -7,7 +7,10 @@
 <body>
 <h1><%= "Hello World!" %>
 </h1>
+<h1>
+    FrontController
+</h1>
 <br/>
-<a href="hello-servlet">Hello Servlet</a>
+<a href="/todo/list">Todo 목록 보기</a>
 </body>
 </html>
