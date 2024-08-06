@@ -1,11 +1,8 @@
-package org.example.controller;
-
+package org.example.controller.member;
 
 import lombok.extern.slf4j.Slf4j;
-import org.example.dto.MemberDTOListV1;
+import org.example.dto.member.MemberDtoListV1;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -14,14 +11,21 @@ import javax.servlet.http.HttpServletResponse;
 
 @Controller
 @Slf4j
-public class MemberShowControllerV1 {
-    private MemberDTOListV1 memberList = MemberDTOListV1.getInstance();
 
-    @GetMapping("/member/show")
+public class MemberSaveControllerV1 {
+    private MemberDtoListV1 memberList = MemberDtoListV1.getInstance();
+
+    @RequestMapping(value = "/member/form/save", method = RequestMethod.GET)
     public String process(HttpServletRequest req, HttpServletResponse resp) {
-        log.info("==========> 회원 목록 조회 페이티 호출, /member/show");
+        log.info("==========> 회원 추가 Request 호출, /member/form/save");
 
+        String id = req.getParameter("id");
+        String name = req.getParameter("name");
+
+        memberList.addList(id, name);
         req.setAttribute("memberList", memberList.getList());
         return "member-show";
+
     }
 }
+

@@ -1,10 +1,10 @@
-package org.example.dto;
+package org.example.dto.member;
 
-public class MemberDTO {
+public class MemberDto {
     private String id;
     private String name;
 
-    public MemberDTO(String id, String name) {
+    public MemberDto(String id, String name) {
         this.id = id;
         this.name = name;
     }
