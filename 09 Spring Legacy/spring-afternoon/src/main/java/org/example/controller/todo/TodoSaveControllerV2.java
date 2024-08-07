@@ -1,35 +1,39 @@
 package org.example.controller.todo;
 
 import lombok.extern.slf4j.Slf4j;
-import org.example.dto.todo.TodoDTOListV1;
-import org.example.dto.todo.TodoDTOListV2;
+import org.example.dto.todo.TodoDtoListV1;
+import org.example.dto.todo.TodoDtoListV2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 @Controller
 @Slf4j
 public class TodoSaveControllerV2 {
-    private TodoDTOListV2 todoList;
+    private TodoDtoListV2 todoDtoList;
 
     @Autowired
-    public TodoSaveControllerV2(TodoDTOListV2 todoDTOList) {
-        this.todoDTOList = todoDTOList;
+    public TodoSaveControllerV2(TodoDtoListV2 todoDtoList) {
+        this.todoDtoList = todoDtoList;
     }
 
-    @RequestMapping(value = "/todo/V2/form/save", method = RequestMethod.GET)
-    public String process(HttpServletRequest request) {
-        log.info("========> 할 일 추가, Request 호출, /todo/form/save");
+    @RequestMapping(value = "/todo/v2/form/save", method = RequestMethod.GET)
+    public String process(HttpServletRequest request, Model model) {
+        log.info(" =========> 회원 추가 Request, /todo/v2/form/save");
 
         String todo = request.getParameter("todo");
+        todoDtoList.addList(todo);
 
-        todoList.addList(todo);
+        model.addAttribute("todoList", todoDtoList.getList());
 
-        request.setAttribute("todoList", todoList.getList());
         return "todo-show2";
     }
+
+
+
+
 }

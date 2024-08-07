@@ -9,17 +9,15 @@ public class MemberDtoListV1 {
 
     private MemberDtoListV1() {
         this.memberDtoList = new ArrayList<>();
-
-        // 테스트 데이터 추가
         this.addList("tetz", "이효석");
-        this.addList("joonil", "문준일");
+        this.addList("siwan", "김시완");
     }
 
-    //
     public static synchronized MemberDtoListV1 getInstance() {
         if (instance == null) {
             instance = new MemberDtoListV1();
         }
+
         return instance;
     }
 

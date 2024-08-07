@@ -1,6 +1,5 @@
 package org.example.controller.member;
 
-
 import lombok.extern.slf4j.Slf4j;
 import org.example.dto.member.MemberDtoListV1;
 import org.springframework.stereotype.Controller;
@@ -15,10 +14,12 @@ public class MemberShowControllerV1 {
     private MemberDtoListV1 memberList = MemberDtoListV1.getInstance();
 
     @GetMapping("/member/show")
-    public String process(HttpServletRequest req, HttpServletResponse resp) {
-        log.info("==========> 회원 목록 조회 페이티 호출, /member/show");
+    public String process(HttpServletRequest request, HttpServletResponse response) {
+        log.info("=======> 회원 목록 조회 페이지 호출, /member/show");
 
-        req.setAttribute("memberList", memberList.getList());
+        log.info("Member List: {}", memberList.getList());
+
+        request.setAttribute("memberList", memberList.getList());
         return "member-show";
     }
 }
