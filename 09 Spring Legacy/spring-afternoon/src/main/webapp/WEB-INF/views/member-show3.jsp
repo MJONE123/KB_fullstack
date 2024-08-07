@@ -10,10 +10,10 @@
 <%@ include file="header.jsp"%>
 <html>
 <head>
-    <title>회원 목록</title>
+    <title>회원 목록V3</title>
 </head>
 <body>
-<h1>회원 목록V2</h1>
+<h1>회원 목록V3</h1>
 <ul>
     <li><b>ID-NAME</b></li>
 <c:forEach var = "member" items="${memberList}">

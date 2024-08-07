@@ -7,12 +7,12 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ include file="header.jsp"%>
 <html>
 <head>
     <title>Member List</title>
 </head>
 <body>
-<%@ include file="header.jsp"%>
 <h1>항 일 목록1</h1>
 <ul>
     <li><b>할 일 리스트</b></li>

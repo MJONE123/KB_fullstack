@@ -1,9 +1,7 @@
-package org.example.controller.member;
+package org.example.controller.member.v1;
 
 import lombok.extern.slf4j.Slf4j;
 import org.example.dto.member.MemberDtoListV1;
-import org.example.dto.member.MemberDtoListV2;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -13,15 +11,10 @@ import javax.servlet.http.HttpServletRequest;
 
 @Controller
 @Slf4j
-public class MemberSaveControllerV2 {
-    private MemberDtoListV2 memberList;
+public class MemberSaveControllerV1 {
+    private MemberDtoListV1 memberList = MemberDtoListV1.getInstance();
 
-    @Autowired
-    public MemberSaveControllerV2(MemberDtoListV2 memberDtoList) {
-        this.memberList = memberDtoList;
-    }
-
-    @RequestMapping(value = "/member/v2/form/save", method = RequestMethod.GET)
+    @RequestMapping(value = "/member/form/save", method = RequestMethod.GET)
     public String process(HttpServletRequest request) {
         log.info("==========> 회원 추가 Request 호출, /member/form/save");
 
@@ -32,6 +25,6 @@ public class MemberSaveControllerV2 {
 
         request.setAttribute("memberList", memberList.getList());
 
-        return "member-show2";
+        return "member-show";
     }
 }
