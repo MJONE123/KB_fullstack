@@ -12,7 +12,7 @@
     <title>Member List</title>
 </head>
 <body>
-<%@ include file="header.jsp"%>
+<%@ include file="../header.jsp"%>
 <h1>항 일 목록1</h1>
 <ul>
     <li><b>할 일 리스트</b></li>

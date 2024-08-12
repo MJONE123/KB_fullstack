@@ -11,7 +11,7 @@
     <title>TODO 추가V3</title>
 </head>
 <body>
-<%@ include file="header.jsp"%>
+<%@ include file="../header.jsp"%>
 <h1>TODO 추가</h1>
 <form method="post" action="/todo/V3/form/save">
     <label for="todo">할 일 :</label>

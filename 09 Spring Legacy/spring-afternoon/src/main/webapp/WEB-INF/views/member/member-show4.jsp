@@ -7,7 +7,7 @@
 --%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ include file="header.jsp"%>
+<%@ include file="../header.jsp"%>
 <html>
 <head>
     <title>회원 목록V4</title>
