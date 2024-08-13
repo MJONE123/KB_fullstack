@@ -20,9 +20,9 @@ public class TodoSaveControllerV2 {
         this.todoDtoList = todoDtoList;
     }
 
-    @RequestMapping(value = "/todo/V2/form/save", method = RequestMethod.GET)
+    @RequestMapping(value = "/todo/v2/form/save", method = RequestMethod.GET)
     public String process(HttpServletRequest request, Model model) {
-        log.info(" =========> 회원 추가 Request, /todo/V2/form/save");
+        log.info(" =========> 회원 추가 Request, /todo/v2/form/save");
 
         String todo = request.getParameter("todo");
         todoDtoList.addList(todo);

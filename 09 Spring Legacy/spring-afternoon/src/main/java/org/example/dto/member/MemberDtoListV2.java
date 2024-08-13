@@ -12,7 +12,7 @@ public class MemberDtoListV2 {
     private MemberDtoListV2() {
         this.memberDtoList = new ArrayList<>();
         this.addList("tetz", "이효석");
-        this.addList("joonil", "문준일");
+        this.addList("siwan", "김시완");
     }
 
     public void addList(String id, String name) {

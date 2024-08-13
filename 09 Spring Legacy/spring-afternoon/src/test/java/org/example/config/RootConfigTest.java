@@ -14,33 +14,23 @@ import java.sql.Connection;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-
 @Configuration
 @SpringJUnitConfig
 @ContextConfiguration(classes = RootConfig.class)
 @Slf4j
 @PropertySource("classpath:application.properties")
 class RootConfigTest {
-
     @Autowired
     private SqlSessionFactory sqlSessionFactory;
 
     @Test
-    void dataSource() {
-    }
-
-    @Test
     void sqlSessionFactory() {
-        try (SqlSession session = sqlSessionFactory.openSession() ;
-        Connection con = session.getConnection()){
-            log.info("SqlSession: {}", session);
-            log.info("Connetction: {}, con");
-        }catch(Exception e){
-            fail(e.getMessage());
+        try (SqlSession session = sqlSessionFactory.openSession();
+             Connection conn = session.getConnection()) {
+            log.info("SQLSession", session);
+            log.info("Connection", conn);
+        } catch (Exception e) {
+             fail(e.getMessage());
         }
-    }
-
-    @Test
-    void transactionManager() {
     }
 }

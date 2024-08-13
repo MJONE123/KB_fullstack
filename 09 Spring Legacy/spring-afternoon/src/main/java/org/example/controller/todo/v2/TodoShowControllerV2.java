@@ -17,7 +17,7 @@ public class TodoShowControllerV2 {
         this.todoDtoList = todoDtoList;
     }
 
-    @GetMapping("/todo/V2/show")
+    @GetMapping("/todo/v2/show")
     public String process(Model model) {
         log.info("====> TODO 리스트 보기 페이지 호출, /todo/show");
 

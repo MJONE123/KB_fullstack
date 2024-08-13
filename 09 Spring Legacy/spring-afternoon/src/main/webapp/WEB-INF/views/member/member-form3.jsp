@@ -8,7 +8,7 @@
 <body>
 <%@ include file="../header.jsp"%>
 <h1>회원 추가 V3</h1>
-<form method="post" action="/member/V3/form/save">
+<form method="post" action="/member/v3/form/save">
     <label for="id">아이디 :</label>
     <input type="text" id="id" name="id" required>
     <br>

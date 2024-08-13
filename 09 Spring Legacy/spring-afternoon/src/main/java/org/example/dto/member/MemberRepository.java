@@ -12,9 +12,13 @@ import java.util.List;
 
 @Repository
 @AllArgsConstructor
-//@RequiredArgsConstructor
 public class MemberRepository {
     private MemberMapper memberMapper;
+
+//    @Autowired
+//    public MemberRepository(MemberMapper memberMapper) {
+//        this.memberMapper = memberMapper;
+//    }
 
     public List<MemberDto> findAll() {
         return memberMapper.findAll();

@@ -1,14 +1,10 @@
-<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" %>
-<!DOCTYPE html>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <meta charset="UTF-8">
     <title>Spring</title>
 </head>
 <body>
-<%@ include file="header.jsp"%>
-<h1>헬로 스프링 월드!
-</h1>
+    <%@ include file="header2.jsp"%>
+    <h1>Hello, Spring World!</h1>
 </body>
 </html>
-

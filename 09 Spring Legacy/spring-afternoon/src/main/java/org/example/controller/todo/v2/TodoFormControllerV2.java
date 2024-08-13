@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 @Slf4j
 public class TodoFormControllerV2 {
-    @GetMapping("/todo/V2/form")
+    @GetMapping("/todo/v2/form")
     public String process() {
         log.info(" ============> Todo 추가 페이지 호출, /todo/form");
 
