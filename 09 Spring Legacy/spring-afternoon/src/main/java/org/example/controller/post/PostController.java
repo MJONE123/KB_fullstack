@@ -35,14 +35,14 @@ public class PostController {
         return context + "/post-show";
     }
 
-    
+
     // 게시물 조건 조회
     @GetMapping("/search")
     public String postSearch(
-         @RequestParam("title") String title,
-         @RequestParam("content") String content,
-         HttpServletRequest request,
-         Model model
+            @RequestParam("title") String title,
+            @RequestParam("content") String content,
+            HttpServletRequest request,
+            Model model
     ) {
         log.info("============> 게시글 검색 기능 호출, " + request.getRequestURI());
 
@@ -117,7 +117,6 @@ public class PostController {
         return "redirect:/post/v1/show";
     }
 
-
     // 에러 강제 발생
     @GetMapping("/error")
     public String error(HttpServletRequest request) {
@@ -125,4 +124,9 @@ public class PostController {
 
         throw new RuntimeException("의도적으로 발생시킨 예외");
     }
+
+
+
+
+
 }
