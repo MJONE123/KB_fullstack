@@ -28,6 +28,10 @@ public class JpaBookRepository {
         return book;
     }
 
+    public Book findById(Long id) {
+        return em.find(Book.class, id);
+    }
+
     public void delete(Long id) {
         Book book = em.find(Book.class, id);
         if (book != null) em.remove(book);
