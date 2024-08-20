@@ -44,7 +44,7 @@ public class JpaBookController {
         Book newBook = new Book(null, title, author);
         Book addedBook = jpaBookRepository.save(newBook);
         if(addedBook == null) return ResponseEntity.internalServerError().build();
-        return ResponseEntity.ok(newBook);
+        return ResponseEntity.ok(addedBook);
 
     }
 
