@@ -1,0 +1,19 @@
+package org.example.security;
+
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+@Configuration
+public class UserConfig implements WebMvcConfigurer {
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        System.out.println("시큐리티 인터셉터가 등록되었습니담");
+        registry.addInterceptor(new AuthenticationInterceptor())
+                .addPathPatterns("/**")
+                .excludePathPatterns("/", "/user/**", "/resources/**");
+
+
+    }
+}
