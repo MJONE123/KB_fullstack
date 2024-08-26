@@ -27,11 +27,13 @@ public class UserController {
     // /Post /user/login
 
     @PostMapping("/login")
-    public String login(@ModelAttribute("username") String username,
+    public String login(@RequestParam("username") String username,
                         @RequestParam("password") String password,
                         Model model, HttpSession session
     ) {
         User user = userService.findByUsername(username);
+
+        System.out.println("user" + user.toString());
 
         //실패케이스
         if(user == null) {
@@ -46,10 +48,46 @@ public class UserController {
         session.setAttribute("loginUser", user);
         model.addAttribute("username", username);
 
-        return context + "/user-success";
+        return context + "/login-success";
 
     }
 
+    // Get /user/logout
+    @GetMapping("/logout")
+    public String logout(HttpSession session) {
+        session.invalidate();
+        return context + "/logout";
+    }
 
+    @GetMapping("/register")
+    public String registerPage() {
+        return context + "/register";
+    }
 
+    @PostMapping("/register")
+    public String register(
+            @RequestParam("username") String username,
+            @RequestParam("password") String password,
+            Model model
+    ) {
+        if (username.isEmpty() || password.isEmpty()) {
+            model.addAttribute("errMsg", "아이디 또는 비밀번호가 누락 되었습니다");
+            return context + "/register-failed";
+        }
+
+        User user = userService.findByUsername(username);
+        if (user != null) {
+            model.addAttribute("errMsg", "동일한 ID를 갖는 사용자가 존재합니다");
+            return context + "/register-failed";
+        }
+
+        User newUser = new User();
+        newUser.setUsername(username);
+        newUser.setPassword(password);
+        userService.save(newUser);
+
+        model.addAttribute("username", username);
+        return context + "/register-success";
+
+    }
 }

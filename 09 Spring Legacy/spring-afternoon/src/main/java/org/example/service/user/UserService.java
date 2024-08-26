@@ -19,4 +19,9 @@ public class UserService {
     public boolean isPasswordValid(User user, String rawPassword) {
         return rawPassword.equals(user.getPassword());
     }
+
+    public User save(User user) {
+        user.setRoles("ROLE_MEMBER");
+        return userRepository.save(user);
+    }
 }

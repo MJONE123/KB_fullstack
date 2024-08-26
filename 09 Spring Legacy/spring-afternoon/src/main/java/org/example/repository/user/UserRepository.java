@@ -21,10 +21,12 @@ public class UserRepository {
                 .setParameter("username", username)
                 .getResultList();
 
+        System.out.println(users.size());
+
         return users.isEmpty() ? null : users.get(0);
     }
 
-    public User Save(User user) {
+    public User save(User user) {
         em.persist(user);
         return user;
     }
