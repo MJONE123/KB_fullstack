@@ -33,10 +33,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 //        http.addFilterBefore(encodingFilter(), CsrfFilter.class);
         http.formLogin()
-                .loginPage("/user/login")
-                .loginProcessingUrl("/user/login")
-                .defaultSuccessUrl("/user/member")
-                .failureUrl("/user/login-failed");
+                .loginPage("/security/login")
+                .loginProcessingUrl("/security/login")
+                .defaultSuccessUrl("/security/member")
+                .failureUrl("/security/login-failed");
 
 
 
