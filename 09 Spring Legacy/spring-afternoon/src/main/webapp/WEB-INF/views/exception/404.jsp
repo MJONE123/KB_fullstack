@@ -7,7 +7,7 @@
 </head>
 <body>
 <%@include file="../header2.jsp"%>
-<h1>404, 겠냐?</h1>
-<a href="/">안돼 돌아가</a>
+<h1>404 낫 파운드</h1>
+<a href="/">뒤로가기</a>
 </body>
 </html>
