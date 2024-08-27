@@ -31,9 +31,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/security/**").permitAll()
                 .antMatchers("/**").access("hasRole('ROLE_MEMBER')");
 
-        http.addFilterBefore(encodingFilter(), CsrfFilter.class);
+//        http.addFilterBefore(encodingFilter(), CsrfFilter.class);
+        http.formLogin()
+                .loginPage("/user/login")
+                .loginProcessingUrl("/user/login")
+                .defaultSuccessUrl("/user/member")
+                .failureUrl("/user/login-failed");
 
-    
+
+
 
 
 
