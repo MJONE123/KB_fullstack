@@ -94,6 +94,9 @@ dependencies {
     implementation("org.springframework.security:spring-security-core:${springSecurityVersion}")
     implementation("org.springframework.security:spring-security-taglibs:${springSecurityVersion}")
 
+    // 카카오용 GSON
+    implementation 'com.google.code.gson:gson:2.8.6'
+
 }
 
 
