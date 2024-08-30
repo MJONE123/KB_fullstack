@@ -10,16 +10,20 @@
     <a href="/post/v1/show">게시글 목록</a>
     <a href="/post/v1/404">404</a>
     <a href="/post/v1/error">error</a>
+
     <h3>V1 REST</h3>
     <a href="/">HOME</a>
     <a href="/post/v1/rest/show">게시글 목록</a>
+
     <h3>V1 JPA</h3>
     <a href="/">HOME</a>
     <a href="/post/v2/show">게시글 목록</a>
+
     <h3>회원 기능</h3>
     <a href="/user/register">회원가입</a>
     <a href="/user/login">로그인</a>
     <a href="/user/logout">로그아웃</a>
+    
     <h3>시큐리티 회원 기능</h3>
     <a href="/security/admin">admin</a>
     <a href="/security/member">member</a>
