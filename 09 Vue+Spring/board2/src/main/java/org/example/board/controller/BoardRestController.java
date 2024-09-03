@@ -5,17 +5,20 @@ import lombok.extern.log4j.Log4j;
 import org.example.board.domain.Board;
 import org.example.board.mapper.BoardMapper;
 import org.example.board.service.BoardService;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Controller
+// @@@@@@@@@@@@@@@@@@@@@@리스트 뽑는거랑 한개 뽑는 거만 나옴. detail, list만 보면 됨@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@RestController
 @Log4j
-@RequestMapping("/board")
+@RequestMapping("/rest/board")
+@CrossOrigin
 @RequiredArgsConstructor
-public class BoardController {
+public class BoardRestController {
     // @RequiredArgsConstructor 에 의해 의존성이 자동으로 주입 됩니다
     private final BoardService boardService;
     private final String context = "/board";
@@ -23,13 +26,10 @@ public class BoardController {
 
     // 문제 1. 게시판 목록 기능 구현하기    
     @GetMapping("/list")
-    public String listPage(Model model) {
+    public ResponseEntity<List<Board>> listPage() {
         // 여기 부분에 코드를 완성하여, 게시판 목록 기능을 완성시켜 주세요
         List<Board> list = boardService.getList();
-        System.out.println("#############");
-        System.out.println(list.get(0).toString());
-        model.addAttribute("boardList", list);
-        return context + "/list";
+        return ResponseEntity.ok(list);
     }
 
     // 게시글 작성 모드 페이지로 이동하는 메서드 -> 이미 완성 된 상태
@@ -46,13 +46,11 @@ public class BoardController {
     }
 
     // 문제 3. 게시글 내용 보기 기능 구현하기
-    @GetMapping("/detail")
-    public String detailPage(@RequestParam("id")Long id, Model model) {
+    @GetMapping("/detail/{id}")
+    public ResponseEntity<Board> detailPage(@PathVariable("id")Long id) {
         // 여기 부분에 코드를 완성하여, 게시글 내용 보기 기능을 완성시켜 주세요
          Board findBoard = boardService.detail(id);
-         model.addAttribute("board", findBoard);
-
-        return context + "/detail";
+        return ResponseEntity.ok(findBoard);
     }
 
     // 문제 4. 게시글 삭제 기능 구현하기
