@@ -6,11 +6,14 @@
 <mapper namespace="org.example.board.mapper.BoardMapper">
     <select id="getList" resultType="Board">
     -- 문제 1. 게시판 목록 기능 구현하기 : 적절한 SQL 구문을 작성해 주세요
-    SELECT * FROM boards;
+    SELECT * FROM boards ORDER BY id DESC;
     </select>
 
     <insert id="create">
     -- 문제 2. 게시글 작성 기능 구현하기 : 적절한 SQL 구문을 작성해 주세요
+    INSERT INTO boards (title, content, author)
+    VALUES (#{title}, #{content}, #{author})
+
     </insert>
 
     <select id="detail" resultType="Board">

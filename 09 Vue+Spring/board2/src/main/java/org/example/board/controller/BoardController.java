@@ -26,8 +26,6 @@ public class BoardController {
     public String listPage(Model model) {
         // 여기 부분에 코드를 완성하여, 게시판 목록 기능을 완성시켜 주세요
         List<Board> list = boardService.getList();
-        System.out.println("#############");
-        System.out.println(list.get(0).toString());
         model.addAttribute("boardList", list);
         return context + "/list";
     }
@@ -40,8 +38,9 @@ public class BoardController {
 
     // 문제 2. 게시글 작성 기능 구현하기
     @PostMapping("/create")
-    public String create() {
+    public String create(@ModelAttribute Board board) {
         // 여기 부분에 코드를 완성하여, 게시글 작성 기능을 완성시켜 주세요
+        boardService.create(board);
         return "redirect:/board/list";
     }
 

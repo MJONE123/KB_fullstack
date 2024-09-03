@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f2b26dc-eaa9-4f94-8288-b2f01064ce62" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/board/controller/BoardRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/board/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/board/controller/BoardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/board/service/BoardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/board/service/BoardServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/board/mapper/BoardMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/board/mapper/BoardMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/detail.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/update.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,7 +200,7 @@
       <workItem from="1725347058742" duration="1618000" />
       <workItem from="1725348742812" duration="1486000" />
       <workItem from="1725350468659" duration="26000" />
-      <workItem from="1725350590800" duration="2291000" />
+      <workItem from="1725350590800" duration="6593000" />
     </task>
     <servers />
   </component>
