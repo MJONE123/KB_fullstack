@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringLegacy.main.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringLegacy.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/board2.iml" filepath="$PROJECT_DIR$/.idea/board2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/org.example.SpringLegacy.main.iml" filepath="$PROJECT_DIR$/.idea/modules/org.example.SpringLegacy.main.iml" />
     </modules>
   </component>
 </project>
