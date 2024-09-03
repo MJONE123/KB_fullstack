@@ -99,6 +99,7 @@
     </tr>
     </thead>
     <tbody>
+<%--    이부분 jstl 문법 공부하기!!!!!!!!!!!!!!--%>
     <c:forEach var="board" items="${boardList}">
         <tr>
             <td>${board.id}</td>
