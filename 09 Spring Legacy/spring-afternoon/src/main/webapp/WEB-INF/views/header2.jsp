@@ -23,7 +23,7 @@
     <a href="/user/register">회원가입</a>
     <a href="/user/login">로그인</a>
     <a href="/user/logout">로그아웃</a>
-    
+
     <h3>시큐리티 회원 기능</h3>
     <a href="/security/admin">admin</a>
     <a href="/security/member">member</a>
