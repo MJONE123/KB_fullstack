@@ -3,6 +3,5 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/06_SQL/test_db" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/claude3.5/accountBookTest/accountBookTest/vue" vcs="Git" />
   </component>
 </project>
